@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		2AAD647D23CA009700DADC73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAD647C23CA009700DADC73 /* AppDelegate.swift */; };
-		2AAD647F23CA009700DADC73 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAD647E23CA009700DADC73 /* SceneDelegate.swift */; };
 		2AAD648123CA009700DADC73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAD648023CA009700DADC73 /* ViewController.swift */; };
 		2AAD648423CA009700DADC73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAD648223CA009700DADC73 /* Main.storyboard */; };
 		2AAD648623CA009800DADC73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AAD648523CA009800DADC73 /* Assets.xcassets */; };
 		2AAD648923CA009800DADC73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAD648723CA009800DADC73 /* LaunchScreen.storyboard */; };
+		2AAD649123CA04BB00DADC73 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAD649023CA04BB00DADC73 /* BaseViewController.swift */; };
+		2AAD649423CA052600DADC73 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAD649323CA052600DADC73 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2AAD647923CA009700DADC73 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AAD647C23CA009700DADC73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2AAD647E23CA009700DADC73 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2AAD648023CA009700DADC73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2AAD648323CA009700DADC73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2AAD648523CA009800DADC73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AAD648823CA009800DADC73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2AAD648A23CA009800DADC73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AAD649023CA04BB00DADC73 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		2AAD649323CA052600DADC73 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,24 @@
 		2AAD647B23CA009700DADC73 /* ChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				2AAD649223CA04C200DADC73 /* Utils */,
 				2AAD647C23CA009700DADC73 /* AppDelegate.swift */,
-				2AAD647E23CA009700DADC73 /* SceneDelegate.swift */,
 				2AAD648023CA009700DADC73 /* ViewController.swift */,
+				2AAD649323CA052600DADC73 /* SceneDelegate.swift */,
 				2AAD648223CA009700DADC73 /* Main.storyboard */,
 				2AAD648523CA009800DADC73 /* Assets.xcassets */,
 				2AAD648723CA009800DADC73 /* LaunchScreen.storyboard */,
 				2AAD648A23CA009800DADC73 /* Info.plist */,
 			);
 			path = ChatApp;
+			sourceTree = "<group>";
+		};
+		2AAD649223CA04C200DADC73 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2AAD649023CA04BB00DADC73 /* BaseViewController.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +150,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AAD648123CA009700DADC73 /* ViewController.swift in Sources */,
+				2AAD649123CA04BB00DADC73 /* BaseViewController.swift in Sources */,
 				2AAD647D23CA009700DADC73 /* AppDelegate.swift in Sources */,
-				2AAD647F23CA009700DADC73 /* SceneDelegate.swift in Sources */,
+				2AAD649423CA052600DADC73 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +228,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +282,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -287,6 +299,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XN294VVZ35;
 				INFOPLIST_FILE = ChatApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +307,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.erayalparslan.ChatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -305,6 +318,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XN294VVZ35;
 				INFOPLIST_FILE = ChatApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +326,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.erayalparslan.ChatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
