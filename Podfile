@@ -6,18 +6,18 @@ target 'ChatApp' do
   use_frameworks!
 
   # Pods for ChatApp
-#  pod 'Firebase/Database'
-#  pod 'Firebase/Core'
-#  pod 'Firebase/Auth'
-#  pod 'Firebase/Storage'
-#  pod 'Firebase/Firestore'
-#
-#  pod 'ProgressHUD'
-#  pod 'MBProgressHUD'
-#  pod 'IQAudioRecorderController'
-#  pod 'JSQMessagesViewController', '7.3.3'
-#  pod 'IDMPhotoBrowser'
-#
-#  pod 'ImagePicker'
-#  pod 'Firebase/Analytics'
+  pod 'Firebase/Database'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Firestore'
+  
+  pod 'ProgressHUD'
+  pod 'MBProgressHUD'
+  pod 'IQAudioRecorderController'
+  pod 'JSQMessagesViewController', '7.3.3'
+  pod 'IDMPhotoBrowser'
+  
+  pod 'ImagePicker'
+  pod 'Firebase/Analytics'
 end
