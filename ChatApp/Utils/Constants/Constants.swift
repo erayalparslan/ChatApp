@@ -137,11 +137,13 @@ public let kWITHUSERAVATAR = "withUserAvatar"
 struct Constants {
     struct Storyboards{
         static let Home = UIStoryboard(name: "Home", bundle: nil)
+        static let Main = UIStoryboard(name: "Main", bundle: nil)
     }
     
     struct String{
         struct ViewController {
             static let HomeViewController = "HomeViewController"
+            static let LoginViewController     = "LoginViewController"
         }
         
         struct TabbarController {

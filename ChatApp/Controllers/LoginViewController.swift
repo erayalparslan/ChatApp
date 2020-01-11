@@ -9,7 +9,7 @@
 import UIKit
 import ProgressHUD
 
-class ViewController: BaseViewController {
+class LoginViewController: BaseViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var repasswordTextField: UITextField!
@@ -38,7 +38,7 @@ class ViewController: BaseViewController {
     
 }
 //MARK: IBActions
-extension ViewController{
+extension LoginViewController{
     @IBAction func loginButtonClicked(_ sender: UIButton) {
         checkLoginUser()
     }
@@ -49,7 +49,7 @@ extension ViewController{
 }
 
 //MARK: UITextFieldDelegate
-extension ViewController{
+extension LoginViewController{
     override func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         _ = super.textFieldShouldReturn(textField)
         let nextResponder: UIResponder? = textField.superview?.viewWithTag(textField.tag + 1)
@@ -61,7 +61,7 @@ extension ViewController{
 }
 
 //MARK: Helper Methods
-extension ViewController{
+extension LoginViewController{
     private func setupViewController(){
         emailTextField.delegate = self
         passwordTextField.delegate = self
@@ -98,7 +98,7 @@ extension ViewController{
             self.cleanTextFields()
             self.view.endEditing(true)
             
-            //todo: present app
+            PresentViewController.HomeTabbarController(vc: self)
         }
     }
     

@@ -11,13 +11,18 @@ import UIKit
 extension UIViewController{
     
     struct PresentViewController{
-        struct TabbarController{
-            static func HomeTabbarController(vc: UIViewController){
-                if let tabbarController = Constants.Storyboards.Home.instantiateViewController(withIdentifier: Constants.String.TabbarController.HomeTabbarController) as? UITabBarController{
-                    tabbarController.modalPresentationStyle = .fullScreen
-                    vc.present(tabbarController, animated: true, completion: nil)
-                }
+        static func HomeTabbarController(vc: UIViewController){
+            if let tabbarController = Constants.Storyboards.Home.instantiateViewController(withIdentifier: Constants.String.TabbarController.HomeTabbarController) as? UITabBarController{
+                tabbarController.modalPresentationStyle = .fullScreen
+                vc.present(tabbarController, animated: true, completion: nil)
             }
+        }
+
+        static func LoginViewController(vc: UIViewController){
+            let viewController = Constants.Storyboards.Main.instantiateViewController(withIdentifier: Constants.String.ViewController.LoginViewController)
+            let navigationController = UINavigationController(rootViewController: viewController)
+            navigationController.modalPresentationStyle = .fullScreen
+            vc.present(navigationController, animated: true, completion: nil)
         }
     }
 }

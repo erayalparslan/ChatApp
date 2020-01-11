@@ -87,8 +87,10 @@ extension RegisterViewController{
             }
             else{
                 ProgressHUD.showSuccess("Registration is successful")
+                
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: USER_DID_LOGIN_NOTIFICATION), object: nil, userInfo: [kUSERID:FUser.currentId()])
                 DispatchQueue.main.async {
-                    PresentViewController.TabbarController.HomeTabbarController(vc: self)
+                    PresentViewController.HomeTabbarController(vc: self)
                 }
             }
         }
