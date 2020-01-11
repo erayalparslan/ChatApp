@@ -17,7 +17,7 @@ target 'ChatApp' do
   pod 'IQAudioRecorderController'
   pod 'JSQMessagesViewController', '7.3.3'
   pod 'IDMPhotoBrowser'
-  
+  pod 'IQKeyboardManager'
   pod 'ImagePicker'
   pod 'Firebase/Analytics'
 end

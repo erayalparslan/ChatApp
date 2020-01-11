@@ -289,6 +289,7 @@ PODS:
   - ImagePicker (3.1.0)
   - IQAudioRecorderController (1.2.3):
     - SCSiriWaveformView
+  - IQKeyboardManager (6.5.4)
   - JSQMessagesViewController (7.3.3):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
@@ -316,6 +317,7 @@ DEPENDENCIES:
   - IDMPhotoBrowser
   - ImagePicker
   - IQAudioRecorderController
+  - IQKeyboardManager
   - JSQMessagesViewController (= 7.3.3)
   - MBProgressHUD
   - ProgressHUD
@@ -346,6 +348,7 @@ SPEC REPOS:
     - IDMPhotoBrowser
     - ImagePicker
     - IQAudioRecorderController
+    - IQKeyboardManager
     - JSQMessagesViewController
     - JSQSystemSoundPlayer
     - leveldb-library
@@ -381,6 +384,7 @@ SPEC CHECKSUMS:
   IDMPhotoBrowser: b96159fe4adb991a844068eb17dab9c0b7d7e51a
   ImagePicker: db1fd7626337b2577c523bef5f499bbbe5a37079
   IQAudioRecorderController: 69a67c2e0b87bd8746cbb4de175fd7a0bf820009
+  IQKeyboardManager: 72b359cd7e777e3a984cedbe05f8da45320cbb63
   JSQMessagesViewController: 0ee3f80237268192a3e8337fd0d787f1a1bf5a7a
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
@@ -391,6 +395,6 @@ SPEC CHECKSUMS:
   SCSiriWaveformView: 15b9dd6f94c7536e2032b34a35c6ff74d38c7411
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: 839d232c0f14dd705c967591cb375c01661f902a
+PODFILE CHECKSUM: 9d835ad1c6eebc9e1e8162fbdf9a7a6029603939
 
 COCOAPODS: 1.8.4

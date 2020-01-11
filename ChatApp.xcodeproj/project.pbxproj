@@ -13,6 +13,9 @@
 		2A11C19823CA29B5001B9247 /* FCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11C19723CA29B5001B9247 /* FCollectionReference.swift */; };
 		2A11C19A23CA29FD001B9247 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11C19923CA29FD001B9247 /* HelperFunctions.swift */; };
 		2A1F92A023CA450B003586D7 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F929F23CA450B003586D7 /* RegisterViewController.swift */; };
+		2A1F92A423CA600B003586D7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A1F92A323CA600B003586D7 /* Home.storyboard */; };
+		2A1F92A823CA603F003586D7 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F92A723CA603F003586D7 /* UIViewControllerExtension.swift */; };
+		2A1F92AA23CA61DA003586D7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F92A923CA61DA003586D7 /* HomeViewController.swift */; };
 		2AAD647D23CA009700DADC73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAD647C23CA009700DADC73 /* AppDelegate.swift */; };
 		2AAD648123CA009700DADC73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAD648023CA009700DADC73 /* ViewController.swift */; };
 		2AAD648423CA009700DADC73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAD648223CA009700DADC73 /* Main.storyboard */; };
@@ -30,6 +33,9 @@
 		2A11C19723CA29B5001B9247 /* FCollectionReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCollectionReference.swift; sourceTree = "<group>"; };
 		2A11C19923CA29FD001B9247 /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		2A1F929F23CA450B003586D7 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		2A1F92A323CA600B003586D7 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		2A1F92A723CA603F003586D7 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		2A1F92A923CA61DA003586D7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2AAD647923CA009700DADC73 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AAD647C23CA009700DADC73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AAD648023CA009700DADC73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,8 +90,33 @@
 			isa = PBXGroup;
 			children = (
 				2A1F929F23CA450B003586D7 /* RegisterViewController.swift */,
+				2A1F92A923CA61DA003586D7 /* HomeViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2A1F92A123CA5FC8003586D7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2A1F92A223CA5FD1003586D7 /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2A1F92A223CA5FD1003586D7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2A1F92A323CA600B003586D7 /* Home.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		2A1F92A523CA6027003586D7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2A1F92A723CA603F003586D7 /* UIViewControllerExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		2AAD647023CA009700DADC73 = {
@@ -109,6 +140,7 @@
 		2AAD647B23CA009700DADC73 /* ChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				2A1F92A123CA5FC8003586D7 /* Views */,
 				2A1F929E23CA44D7003586D7 /* Controllers */,
 				2AAD649223CA04C200DADC73 /* Utils */,
 				2AAD647C23CA009700DADC73 /* AppDelegate.swift */,
@@ -128,6 +160,7 @@
 		2AAD649223CA04C200DADC73 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				2A1F92A523CA6027003586D7 /* Extensions */,
 				2A11C19D23CA2A3B001B9247 /* Sub Classes */,
 				2A11C19C23CA2A26001B9247 /* Helper Functions */,
 				2A11C19B23CA2A1C001B9247 /* Constants */,
@@ -213,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AAD648923CA009800DADC73 /* LaunchScreen.storyboard in Resources */,
+				2A1F92A423CA600B003586D7 /* Home.storyboard in Resources */,
 				2A11C19223CA233A001B9247 /* GoogleService-Info.plist in Resources */,
 				2AAD648623CA009800DADC73 /* Assets.xcassets in Resources */,
 				2AAD648423CA009700DADC73 /* Main.storyboard in Resources */,
@@ -270,10 +304,12 @@
 			files = (
 				2A1F92A023CA450B003586D7 /* RegisterViewController.swift in Sources */,
 				2A11C19423CA284A001B9247 /* FUser.swift in Sources */,
+				2A1F92A823CA603F003586D7 /* UIViewControllerExtension.swift in Sources */,
 				2A11C19A23CA29FD001B9247 /* HelperFunctions.swift in Sources */,
 				2AAD648123CA009700DADC73 /* ViewController.swift in Sources */,
 				2AAD649123CA04BB00DADC73 /* BaseViewController.swift in Sources */,
 				2AAD647D23CA009700DADC73 /* AppDelegate.swift in Sources */,
+				2A1F92AA23CA61DA003586D7 /* HomeViewController.swift in Sources */,
 				2AAD649423CA052600DADC73 /* SceneDelegate.swift in Sources */,
 				2A11C19823CA29B5001B9247 /* FCollectionReference.swift in Sources */,
 				2A11C19623CA289C001B9247 /* Constants.swift in Sources */,

@@ -134,3 +134,18 @@ public let kWITHUSERFULLNAME = "withUserFullName"
 public let kCALLERAVATAR = "callerAvatar"
 public let kWITHUSERAVATAR = "withUserAvatar"
 
+struct Constants {
+    struct Storyboards{
+        static let Home = UIStoryboard(name: "Home", bundle: nil)
+    }
+    
+    struct String{
+        struct ViewController {
+            static let HomeViewController = "HomeViewController"
+        }
+        
+        struct TabbarController {
+            static let HomeTabbarController = "HomeTabbarController"
+        }
+    }
+}

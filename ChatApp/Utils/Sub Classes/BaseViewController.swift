@@ -24,3 +24,16 @@ class BaseViewController: UIViewController{
         self.view.endEditing(true)
     }
 }
+
+extension BaseViewController: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let nextTag: NSInteger = textField.tag + 1
+        let nextResponder: UIResponder? = textField.superview?.viewWithTag(nextTag)
+        if (nextResponder != nil) {
+            nextResponder!.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return false
+    }
+}

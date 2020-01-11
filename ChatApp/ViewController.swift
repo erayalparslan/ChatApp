@@ -29,52 +29,34 @@ class ViewController: BaseViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? RegisterViewController{
+            vc.email    = emailTextField.text!
+            vc.password = passwordTextField.text!
+        }
+    }
     
 }
 //MARK: IBActions
 extension ViewController{
     @IBAction func loginButtonClicked(_ sender: UIButton) {
-        self.view.endEditing(true)
-        if emailTextField.text != "" && passwordTextField.text != ""{
-            loginUser()
-        }
-        else{
-            ProgressHUD.show("Email/Password is missing")
-        }
+        checkLoginUser()
     }
     
     @IBAction func registerButtonClicked(_ sender: UIButton) {
-        self.view.endEditing(true)
-        if emailTextField.text != "" && passwordTextField.text != "" && repasswordTextField.text != ""{
-            if passwordTextField.text == repasswordTextField.text{
-                registerUser()
-            }
-            else{
-                ProgressHUD.showError("Passwords mismatch!")
-            }
-            
-        }
-        else{
-            ProgressHUD.showError("Email/Password/Re-password is missing")
-        }
+        checkRegisteringUser()
     }
 }
 
 //MARK: UITextFieldDelegate
-extension ViewController: UITextFieldDelegate{
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        if textField == emailTextField{
-            passwordTextField.becomeFirstResponder()
+extension ViewController{
+    override func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        _ = super.textFieldShouldReturn(textField)
+        let nextResponder: UIResponder? = textField.superview?.viewWithTag(textField.tag + 1)
+        if nextResponder == nil{
+            checkRegisteringUser()
         }
-        else if textField == passwordTextField{
-            repasswordTextField.becomeFirstResponder()
-        }
-        else if textField == repasswordTextField{
-            //todo
-        }
-        return true
+        return false
     }
 }
 
@@ -117,6 +99,32 @@ extension ViewController{
             self.view.endEditing(true)
             
             //todo: present app
+        }
+    }
+    
+    private func checkLoginUser(){
+        self.view.endEditing(true)
+        if emailTextField.text != "" && passwordTextField.text != ""{
+            loginUser()
+        }
+        else{
+            ProgressHUD.show("Email/Password is missing")
+        }
+    }
+    
+    private func checkRegisteringUser(){
+        self.view.endEditing(true)
+        if emailTextField.text != "" && passwordTextField.text != "" && repasswordTextField.text != ""{
+            if passwordTextField.text == repasswordTextField.text{
+                registerUser()
+            }
+            else{
+                ProgressHUD.showError("Passwords mismatch!")
+            }
+            
+        }
+        else{
+            ProgressHUD.showError("Email/Password/Re-password is missing")
         }
     }
 }
