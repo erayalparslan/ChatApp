@@ -78,6 +78,7 @@ extension LoginViewController{
         ProgressHUD.show("Login...")
         
         FUser.loginUserWith(email: emailTextField.text!, password: passwordTextField.text!) { (error) in
+            ProgressHUD.dismiss()
             if let error = error{
                 ProgressHUD.showError(error.localizedDescription)
                 return
@@ -94,7 +95,6 @@ extension LoginViewController{
     
     private func openApp(){
         DispatchQueue.main.async {
-            ProgressHUD.dismiss()
             self.cleanTextFields()
             self.view.endEditing(true)
             

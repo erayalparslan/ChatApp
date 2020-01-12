@@ -7,27 +7,40 @@
 //
 
 import UIKit
+import Firebase
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    var authListener: AuthStateDidChangeListenerHandle?
     var window: UIWindow?
 
 
     @available(iOS 13.0, *)
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        /*
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        self.window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        FirebaseApp.configure()
         
-        let loginStoryboard = Constants.Storyboard.loginStoryboard
-        
-        let navigationController = UINavigationController(rootViewController: loginViewController)
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    
-        //appDelegate.window = window
-        self.window?.rootViewController = navigationController
-        self.window?.makeKeyAndVisible()
-        */
+        authListener = Auth.auth().addStateDidChangeListener({ (auth, user) in
+            Auth.auth().removeStateDidChangeListener(self.authListener!)
+            
+            if user != nil{
+                if UserDefaults.standard.object(forKey: kCURRENTUSER) != nil{
+                    
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: USER_DID_LOGIN_NOTIFICATION), object: nil, userInfo: [kUSERID:FUser.currentId()])
+                    
+                    DispatchQueue.main.async {
+                        if let tabbarController = Constants.Storyboards.Home.instantiateViewController(withIdentifier: Constants.String.TabbarController.HomeTabbarController) as? UITabBarController{
+                            tabbarController.modalPresentationStyle = .fullScreen
+                            guard let windowScene = (scene as? UIWindowScene) else { return }
+                            self.window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+                            self.window?.windowScene = windowScene
+                            self.window?.rootViewController = tabbarController
+                            self.window?.makeKeyAndVisible()
+                            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                            appDelegate.window = self.window
+                        }
+                    }
+                }
+            }
+        })
     }
     
     @available(iOS 13.0, *)

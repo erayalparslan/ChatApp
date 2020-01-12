@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A0F64AE23CBB740009ABC7C /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F64AC23CBB740009ABC7C /* ContactTableViewCell.swift */; };
+		2A0F64AF23CBB740009ABC7C /* ContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A0F64AD23CBB740009ABC7C /* ContactTableViewCell.xib */; };
+		2A0F64B123CBBA84009ABC7C /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A0F64B023CBBA84009ABC7C /* Contacts.storyboard */; };
+		2A0F64B323CBBAB5009ABC7C /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F64B223CBBAB5009ABC7C /* Contacts.swift */; };
+		2A0F64B823CBBBF3009ABC7C /* SegmentedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F64B623CBBBF3009ABC7C /* SegmentedTableViewCell.swift */; };
+		2A0F64B923CBBBF3009ABC7C /* SegmentedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A0F64B723CBBBF3009ABC7C /* SegmentedTableViewCell.xib */; };
 		2A11C19223CA233A001B9247 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A11C19123CA233A001B9247 /* GoogleService-Info.plist */; };
 		2A11C19423CA284A001B9247 /* FUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11C19323CA284A001B9247 /* FUser.swift */; };
 		2A11C19623CA289C001B9247 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11C19523CA289C001B9247 /* Constants.swift */; };
@@ -28,6 +34,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A0F64AC23CBB740009ABC7C /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		2A0F64AD23CBB740009ABC7C /* ContactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactTableViewCell.xib; sourceTree = "<group>"; };
+		2A0F64B023CBBA84009ABC7C /* Contacts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contacts.storyboard; sourceTree = "<group>"; };
+		2A0F64B223CBBAB5009ABC7C /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
+		2A0F64B623CBBBF3009ABC7C /* SegmentedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedTableViewCell.swift; sourceTree = "<group>"; };
+		2A0F64B723CBBBF3009ABC7C /* SegmentedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmentedTableViewCell.xib; sourceTree = "<group>"; };
 		2A11C19123CA233A001B9247 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2A11C19323CA284A001B9247 /* FUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FUser.swift; sourceTree = "<group>"; };
 		2A11C19523CA289C001B9247 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -64,6 +76,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A0F64A523CB391F009ABC7C /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				2A0F64B523CBBBB7009ABC7C /* SegmentedTableViewCell */,
+				2A0F64B423CBBBAA009ABC7C /* ContactTableViewCell */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		2A0F64AB23CB39AD009ABC7C /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		2A0F64B423CBBBAA009ABC7C /* ContactTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2A0F64AC23CBB740009ABC7C /* ContactTableViewCell.swift */,
+				2A0F64AD23CBB740009ABC7C /* ContactTableViewCell.xib */,
+			);
+			path = ContactTableViewCell;
+			sourceTree = "<group>";
+		};
+		2A0F64B523CBBBB7009ABC7C /* SegmentedTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2A0F64B623CBBBF3009ABC7C /* SegmentedTableViewCell.swift */,
+				2A0F64B723CBBBF3009ABC7C /* SegmentedTableViewCell.xib */,
+			);
+			path = SegmentedTableViewCell;
+			sourceTree = "<group>";
+		};
 		2A11C19B23CA2A1C001B9247 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +141,7 @@
 				2A1F929F23CA450B003586D7 /* RegisterViewController.swift */,
 				2A1F92A923CA61DA003586D7 /* HomeViewController.swift */,
 				2A1F92AB23CA6E21003586D7 /* SettingsViewController.swift */,
+				2A0F64B223CBBAB5009ABC7C /* Contacts.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -102,6 +149,8 @@
 		2A1F92A123CA5FC8003586D7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2A0F64AB23CB39AD009ABC7C /* CollectionViewCells */,
+				2A0F64A523CB391F009ABC7C /* TableViewCells */,
 				2A1F92A223CA5FD1003586D7 /* Storyboards */,
 			);
 			path = Views;
@@ -110,7 +159,9 @@
 		2A1F92A223CA5FD1003586D7 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				2AAD648223CA009700DADC73 /* Main.storyboard */,
 				2A1F92A323CA600B003586D7 /* Home.storyboard */,
+				2A0F64B023CBBA84009ABC7C /* Contacts.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -151,7 +202,6 @@
 				2A11C19323CA284A001B9247 /* FUser.swift */,
 				2A11C19723CA29B5001B9247 /* FCollectionReference.swift */,
 				2AAD649323CA052600DADC73 /* SceneDelegate.swift */,
-				2AAD648223CA009700DADC73 /* Main.storyboard */,
 				2AAD648523CA009800DADC73 /* Assets.xcassets */,
 				2AAD648723CA009800DADC73 /* LaunchScreen.storyboard */,
 				2A11C19123CA233A001B9247 /* GoogleService-Info.plist */,
@@ -248,10 +298,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A0F64AF23CBB740009ABC7C /* ContactTableViewCell.xib in Resources */,
 				2AAD648923CA009800DADC73 /* LaunchScreen.storyboard in Resources */,
+				2A0F64B923CBBBF3009ABC7C /* SegmentedTableViewCell.xib in Resources */,
 				2A1F92A423CA600B003586D7 /* Home.storyboard in Resources */,
 				2A11C19223CA233A001B9247 /* GoogleService-Info.plist in Resources */,
 				2AAD648623CA009800DADC73 /* Assets.xcassets in Resources */,
+				2A0F64B123CBBA84009ABC7C /* Contacts.storyboard in Resources */,
 				2AAD648423CA009700DADC73 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,11 +358,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A0F64B823CBBBF3009ABC7C /* SegmentedTableViewCell.swift in Sources */,
+				2A0F64AE23CBB740009ABC7C /* ContactTableViewCell.swift in Sources */,
 				2A1F92AE23CA71B1003586D7 /* LoginViewController.swift in Sources */,
 				2A1F92A023CA450B003586D7 /* RegisterViewController.swift in Sources */,
 				2A11C19423CA284A001B9247 /* FUser.swift in Sources */,
 				2A1F92A823CA603F003586D7 /* UIViewControllerExtension.swift in Sources */,
 				2A11C19A23CA29FD001B9247 /* HelperFunctions.swift in Sources */,
+				2A0F64B323CBBAB5009ABC7C /* Contacts.swift in Sources */,
 				2AAD649123CA04BB00DADC73 /* BaseViewController.swift in Sources */,
 				2AAD647D23CA009700DADC73 /* AppDelegate.swift in Sources */,
 				2A1F92AA23CA61DA003586D7 /* HomeViewController.swift in Sources */,

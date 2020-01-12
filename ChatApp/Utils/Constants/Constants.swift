@@ -138,6 +138,7 @@ struct Constants {
     struct Storyboards{
         static let Home = UIStoryboard(name: "Home", bundle: nil)
         static let Main = UIStoryboard(name: "Main", bundle: nil)
+        static let Contacts = UIStoryboard(name: "Contacts", bundle: nil)
     }
     
     struct String{
@@ -148,6 +149,11 @@ struct Constants {
         
         struct TabbarController {
             static let HomeTabbarController = "HomeTabbarController"
+        }
+        
+        struct TableViewCell {
+            static let SegmentedTableViewCell = "SegmentedTableViewCell"
+            static let ContactTableViewCell   = "ContactTableViewCell"
         }
     }
 }
