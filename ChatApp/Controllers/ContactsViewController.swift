@@ -40,7 +40,10 @@ extension ContactsViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: <#T##String#>)
+        if let cell = tableView.dequeueReusableCell(withIdentifier: Constants.String.TableViewCell.ContactTableViewCell) as? ContactTableViewCell{
+            cell.updateCellWith(fUser: allUsers[indexPath.row], indexPath: indexPath)
+            return cell
+        }
         
         return UITableViewCell()
     }
@@ -69,7 +72,7 @@ extension ContactsViewController{
             query = reference(.User).whereField(kCITY, isEqualTo: FUser.currentUser()!.city).order(by: kFIRSTNAME)
             
         case kCOUNTRY:
-            query = reference(.User).whereField(kCITY, isEqualTo: FUser.currentUser()!.country).order(by: kCOUNTRY)
+            query = reference(.User).whereField(kCOUNTRY, isEqualTo: FUser.currentUser()!.country).order(by: kCOUNTRY)
             
         default:
             query = reference(.User).order(by: kFIRSTNAME, descending: false)

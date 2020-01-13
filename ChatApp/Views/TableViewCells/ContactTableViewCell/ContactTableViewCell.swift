@@ -29,4 +29,14 @@ class ContactTableViewCell: UITableViewCell {
             }
         }
     }
+    
+    private func addGestureToAvatar(){
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(avatarTapped))
+        tapGesture.numberOfTapsRequired = 1
+        profileImageView.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func avatarTapped(){
+        
+    }
 }

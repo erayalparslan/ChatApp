@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Contacts View Controller-->
+        <!--Contacts-->
         <scene sceneID="gA4-2h-487">
             <objects>
-                <viewController storyboardIdentifier="Contacts" id="HO0-az-0hb" customClass="ContactsViewController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContactsViewController" id="HO0-az-0hb" customClass="ContactsViewController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5sr-oB-728">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,6 +30,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8ys-jj-C8w"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Contacts" id="yxa-g4-4MN">
+                        <barButtonItem key="backBarButtonItem" title=" " id="30n-Sw-pKf"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="ILn-w7-f5f" id="HSn-WU-lE3"/>
                     </connections>

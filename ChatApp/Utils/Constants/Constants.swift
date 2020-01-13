@@ -136,19 +136,25 @@ public let kWITHUSERAVATAR = "withUserAvatar"
 
 struct Constants {
     struct Storyboards{
-        static let Home = UIStoryboard(name: "Home", bundle: nil)
-        static let Main = UIStoryboard(name: "Main", bundle: nil)
+        static let Main     = UIStoryboard(name: "Main", bundle: nil)
+        static let Home     = UIStoryboard(name: "Home", bundle: nil)
         static let Contacts = UIStoryboard(name: "Contacts", bundle: nil)
+        static let Chats    = UIStoryboard(name: "Chats", bundle: nil)
+        static let Settings = UIStoryboard(name: "Settings", bundle: nil)
     }
     
     struct String{
         struct ViewController {
-            static let HomeViewController = "HomeViewController"
-            static let LoginViewController     = "LoginViewController"
+            static let LoginViewController    = "LoginViewController"
+            static let RegisterViewController = "RegisterViewController"
+            static let HomeViewController     = "HomeViewController"
+            static let SettingsViewController = "SettingsViewController"
+            static let ContactsViewController = "ContactsViewController"
+            static let ChatsViewController    = "ChatsViewController"
         }
         
         struct TabbarController {
-            static let HomeTabbarController = "HomeTabbarController"
+            static let HomeTabbarController   = "HomeTabbarController"
         }
         
         struct TableViewCell {

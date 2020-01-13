@@ -4,64 +4,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Settings-->
-        <scene sceneID="ZTE-Op-dhd">
-            <objects>
-                <viewController id="UCx-8N-8QW" customClass="SettingsViewController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QVX-CN-szM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WEC-hm-EMC">
-                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="VxN-n2-4kE" firstAttribute="bottom" secondItem="WEC-hm-EMC" secondAttribute="bottom" id="A8O-x7-Xsp"/>
-                            <constraint firstItem="WEC-hm-EMC" firstAttribute="top" secondItem="VxN-n2-4kE" secondAttribute="top" id="bbl-G9-86G"/>
-                            <constraint firstItem="VxN-n2-4kE" firstAttribute="trailing" secondItem="WEC-hm-EMC" secondAttribute="trailing" id="ru4-ZP-Xat"/>
-                            <constraint firstItem="WEC-hm-EMC" firstAttribute="leading" secondItem="VxN-n2-4kE" secondAttribute="leading" id="vIe-9Z-kM0"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="VxN-n2-4kE"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Settings" largeTitleDisplayMode="always" id="LCa-OD-Ob3">
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="Hv0-M3-1p6">
-                            <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="logoutButtonClicked:" destination="UCx-8N-8QW" id="0PS-8L-SwL"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="tableView" destination="WEC-hm-EMC" id="bvD-Lg-96L"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qf3-lM-XwL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="775.20000000000005" y="157.87106446776613"/>
-        </scene>
-        <!--Call-->
-        <scene sceneID="8sg-J6-2yi">
-            <objects>
-                <viewController id="eUd-da-PWG" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3ZC-Vd-rZX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="7aF-r7-ZzK"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Call" image="call" id="tqh-41-OEC"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oCf-Sq-iPv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-164" y="-542"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8o1-RI-4l5">
             <objects>
@@ -72,36 +17,33 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="eUd-da-PWG" kind="relationship" relationship="viewControllers" id="wUs-Pc-AC1"/>
-                        <segue destination="Dhh-Bs-n8t" kind="relationship" relationship="viewControllers" id="O3b-cw-zfP"/>
+                        <segue destination="jIW-y5-V9R" kind="relationship" relationship="viewControllers" id="VHx-OG-6ox"/>
+                        <segue destination="3oq-oQ-Uci" kind="relationship" relationship="viewControllers" id="YHb-Jy-qqR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dTc-gy-U2i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1083" y="-218"/>
         </scene>
-        <!--Settings-->
-        <scene sceneID="C7u-Md-Xao">
+        <!--ChatsNavigationController-->
+        <scene sceneID="lFO-uv-OQB">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dhh-Bs-n8t" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="Btz-Ng-tZE"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qw4-4Z-Xb3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="UCx-8N-8QW" kind="relationship" relationship="rootViewController" id="cs5-Fb-a3s"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pqh-nk-WFm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Chats" referencedIdentifier="ChatsNavigationController" id="jIW-y5-V9R" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="GSH-Od-StO"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1UA-ZM-vKQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-164" y="157.87106446776613"/>
+            <point key="canvasLocation" x="-108" y="-443"/>
+        </scene>
+        <!--SettingsNavigationController-->
+        <scene sceneID="Eqx-YV-uds">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" referencedIdentifier="SettingsNavigationController" id="3oq-oQ-Uci" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="r2j-Mx-qSz"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ccC-nO-zBE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-107" y="-55"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="call" width="30" height="30"/>
-        <image name="settings" width="25" height="25"/>
-    </resources>
 </document>
