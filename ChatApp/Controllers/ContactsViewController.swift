@@ -20,7 +20,7 @@ class ContactsViewController: BaseViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewController()
-        
+        registerNibs()
         loadUsers(filter: kCITY)
     }
 }
@@ -36,11 +36,14 @@ extension ContactsViewController: UISearchResultsUpdating{
 //MARK: UITableViewDelegate
 extension ContactsViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allUsers.count
+        return allUsers.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: Constants.String.TableViewCell.ContactTableViewCell) as? ContactTableViewCell{
+        if indexPath.row == 0, let cell = tableView.dequeueReusableCell(withIdentifier: Constants.String.TableViewCell.SegmentedTableViewCell) as? SegmentedTableViewCell{
+            return cell
+        }
+        else if let cell = tableView.dequeueReusableCell(withIdentifier: Constants.String.TableViewCell.ContactTableViewCell) as? ContactTableViewCell{
             cell.updateCellWith(fUser: allUsers[indexPath.row], indexPath: indexPath)
             return cell
         }
@@ -54,6 +57,14 @@ extension ContactsViewController{
     private func setupViewController(){
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    private func registerNibs(){
+        let segmentedTableViewCellNib = UINib(nibName: Constants.String.TableViewCell.SegmentedTableViewCell, bundle: nil)
+        let contactTableViewCellNib   = UINib(nibName: Constants.String.TableViewCell.ContactTableViewCell, bundle: nil)
+        
+        tableView.register(segmentedTableViewCellNib, forCellReuseIdentifier: Constants.String.TableViewCell.SegmentedTableViewCell)
+        tableView.register(contactTableViewCellNib, forCellReuseIdentifier: Constants.String.TableViewCell.ContactTableViewCell)
     }
     
     private func filterContentForSearchText(searchText: String, scope: String = "All"){
